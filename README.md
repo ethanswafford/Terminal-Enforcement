@@ -1,5 +1,16 @@
 # Terminal-Enforcement
 Terminal-Enforcement Shell Script
+# Usage:
+
+# ./sec-start.sh # auto-detect interface
+
+# ./sec-start.sh eth0 # specify interface
+
+#
+
+# Requires: sudo, tmux, nethogs, iftop, systemctl, aide (optional but recommended), auditd, suricata
+
+
 
 A basic shell script I made to easily start and automate some of the basic security and
 system hardening tools and applications I use. Its intended to be one of the first
@@ -29,7 +40,7 @@ as this is NOT an installation script.
 
 
 
-After cloning, downloading, or copying & pasting directly to a file:
+<!-- After cloning, downloading, or copying & pasting directly to a file: -->
 --> Make it executable:
 user@linux$ chmod +x sec-start.sh
 
@@ -50,4 +61,5 @@ AIDE init is a “do it once” operation (it can take a bit). After that, the s
 If your Suricata service name differs, check with:
 
 user@linux$ systemctl list-unit-files | grep -i suricata
+
 
